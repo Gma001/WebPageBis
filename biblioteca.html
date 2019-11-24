@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/upload.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+    <title>Biblioteca</title>
+  </head>
+  <body>  
+      <nav>
+          <ul class="container">
+            <a href="index.html"> <img class="logo" src="poze/logo.svg"/> </a>
+            <li><a class= "nav" id ="acasa" href="index.html" style="display:none;"> Acasa</a></li>
+            <li><a class= "nav" id ="biblioteca" href="biblioteca.html" style="display:none;"> Biblioteca </a> </li>
+            <li><a class= "nav" id="logout" href="#" style="display:none;"> Log out </a></li>
+            <li><a class= "nav" id="modalBtn" style="display:none;"> Log in </a></li>
+          </ul>
+      </nav>
+      <div class="footerContainter">
+        <div class="wrapperContent">
+          <form id="addVideo" class="uploadForm">
+            <h3>Alege fisier:</h3>
+            <input id="fileUpload" type="file" required>
+            <input id="caption" type="text" required>            
+            <button id="buttonSubmit" onclick="uploadFile()">Submit </button>
+          </form>
+          <br>
+          <hr>
+          <div id="bibliotecaVideo">
+            
+          </div>   
+        </div>
+        <footer>© 2019 Gabriel Matei. All Rights Reserved.</footer>
+      </div>
+      <div  id="modal-login"class="modal">
+        <div class="modal_content">
+          <span class="closeBtn"> &times;</span>
+          <h4> Log in</h4>
+          <form  action="submit" id="login_form">
+            <div class="input_field">
+              <input type="text" placeholder=" Enter email" id="login_email" required>
+            </div>
+            <div class="input_field">
+              <input type="password" placeholder=" Enter password" id="login_password" required>
+            </div>
+            <button  id="login" class="modal_login" name="button">Log in</button>
+          </form>
+        </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-storage.js"></script>
+
+
+    <script>
+            // TODO: Replace the following with your app's Firebase project configuration
+            var firebaseConfig = {
+         apiKey: "AIzaSyAaIAig9oyAARTMEhMX8Yb3szCotDxH6qI",
+         authDomain: "biserica-d86b5.firebaseapp.com",
+         databaseURL: "https://biserica-d86b5.firebaseio.com",
+         projectId: "biserica-d86b5",
+         storageBucket: "biserica-d86b5.appspot.com",
+         messagingSenderId: "89220075068",
+         appId: "1:89220075068:web:965625234d0a6b13debd39",
+         measurementId: "G-8DFLVS7K66"
+       };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();            
+            const auth = firebase.auth();
+            
+            
+
+
+      </script>
+      <script src="script/modal.js"> </script>
+      <script src="script/upload.js"></script>
+      <script src="script/toggleUI.js"></script>
+  </body>
+</html>

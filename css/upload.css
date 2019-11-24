@@ -1,0 +1,54 @@
+.uploadForm{
+  margin: 20px;
+}
+#buttonSubmit{
+  background-color:rgb(52, 90, 72);
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#caption{
+  width: 200px;
+  border:0;
+  border-bottom: 1px solid grey;
+  height: 30px;
+  border-radius: 0;
+  outline: none;
+}
+#bibliotecaVideo{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+#videoElem{  
+  
+  justify-content: space-around;
+  width: 400px;
+  height: 280px;
+  margin: 2px;
+  text-align: center;
+}
+label{
+  text-align: center;
+  
+}
+video{
+  width: 350px;
+  margin: 20px;
+}
+@media screen  and(max-width: 650px){
+  #bibliotecaVideo{
+    min-width: 200px;
+  }
+}
+@media screen and (max-width: 656px){
+  .wrapperContent{
+    min-width: 383px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biserica Penticostala Bergen</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  </head>
+  <body>
+    <nav>
+      <ul class="container">
+        <a href="index.html"> <img class="logo" src="poze/logo.svg"/> </a>
+        <li><a class= "nav" id ="acasa"  href="index.html" style="display: none;" > Acasa</a></li>
+        <li><a class= "nav" id ="biblioteca"  href="biblioteca.html" style="display: none;" > Biblioteca </a> </li>
+        <li><a class= "nav" id= "logout" href="#" style="display: none;"> Log out </a></li>
+        <li><a class= "nav" id= "modalBtn" style="display: none;"> Log in </a></li>
+      </ul>
+    </nav>
+    <div  id="modal-login" class="modal">
+      <div class="modal_content">
+        <span class="closeBtn"> &times;</span>
+        <h4> Log in</h4>
+        <form  action="submit" id="login_form">
+          <div class="input_field">
+            <input type="text" placeholder=" Enter email" id="login_email" required>
+          </div>
+          <div class="input_field">
+            <input type="password" placeholder=" Enter password" id="login_password" required>
+          </div>
+          <button  id="login" class="modal_login" name="button">Log in</button>
+        </form>
+      </div>
+    </div>
+    <div class="footerContainter">
+      <div class="wrapperContent">
+        <h1> Biserica Penticostala Bergen </h1>
+        <p>
+        Bine ati venit pe site-ul nostru, aici veti putea gasi o biblioteca
+        care contine predici, cantari din programul nostru si informatii
+        privind ora la cat incepe programul de biserica.Adresa la care ne
+        puteti gasi este:
+        <a
+          class="linkMapa"
+          href="https://www.google.com/maps/place/Lille+%C3%98vregaten+31,+5018+Bergen/@60.3943736,5.3279478,17z/data=!3m1!4b1!4m5!3m4!1s0x463cfea61e466f7b:0x9de7cb334d5ad0c2!8m2!3d60.394371!4d5.3301365" target="_blank">
+
+          Lille Øvregaten 31, 5018 Bergen.
+        </a>
+      </p>
+    <div class="flexWrapper">
+      <div class="responsive">
+        <div class="gallery">
+          <img src=poze/bis.jpg alt="biserica" />
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src=poze/render.jpg alt="bisserica" />
+        </div>
+      </div>
+    </div>
+    <div class="program">
+       <h2>Program:</h2>
+       <p class="slujba">Slujba duminicala ora 15-17.</p>
+    </div>
+    </div>
+      <footer>© 2019 Gabriel Matei. All Rights Reserved.</footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+
+
+    <script>
+            // TODO: Replace the following with your app's Firebase project configuration
+            var firebaseConfig = {
+         apiKey: "AIzaSyAaIAig9oyAARTMEhMX8Yb3szCotDxH6qI",
+         authDomain: "biserica-d86b5.firebaseapp.com",
+         databaseURL: "https://biserica-d86b5.firebaseio.com",
+         projectId: "biserica-d86b5",
+         storageBucket: "biserica-d86b5.appspot.com",
+         messagingSenderId: "89220075068",
+         appId: "1:89220075068:web:965625234d0a6b13debd39",
+         measurementId: "G-8DFLVS7K66"
+       };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            const auth = firebase.auth();
+
+
+      </script>
+
+
+
+
+<script src="script/modal.js"> </script>
+      
+         <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="script/toggleUI.js"></script> 
+    
+
+  </body>
+</html>

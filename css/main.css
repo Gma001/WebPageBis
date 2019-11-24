@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+nav{
+  background:rgb(52, 90, 72);
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media query and (max-width: 600px) {
+.container{
+  flex-wrap: wrap;
+}
+.container > li{
+  flex-basis: 50%
+  }
+}
+li{
+  list-style: none;
+  padding: 13px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+li a{
+  display: block;
+  text-align: center;
+}
+li a:hover{
+  color: #E3BC00;
+}
+.nav{
+  position: relative;
+}
+.nav:after{
+  content: "";
+  position: absolute;
+  width: 0;height: 3px;
+  display: block;margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+.nav:hover:after{
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+.footerContainter{
+  position:relative;
+}
+
+.wrapperContent {
+  margin-right:20%;
+  margin-left:20%;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+.slujba{
+  font-weight: bold;
+  color:red;
+}
+.linkMapa{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.linkMapa:hover{
+  border-bottom: 1px dashed red;
+}
+img{
+  width: 395px;
+  height: 280px;
+}
+
+@media screen and (max-width:600px) {
+img{
+  width:100%;
+  }
+}
+.flexWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+}
+.responsive{
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  justify-content: center;
+  margin-right: 5px;
+}
+.program{
+  display: block;
+}
+footer{
+  position: absolute  ;
+  bottom: 0;
+  background-color: rgb( 52, 90, 72);
+  width: 100%;
+  height: 2.5rem;
+}
+#modalBtn{
+  background-color: rgb(52, 90, 72);
+  border:none;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+#modalBtn:hover{
+  color:#E3BC00;
+}
+.logo{
+  width: 100px;
+  height: 50px;
+}
