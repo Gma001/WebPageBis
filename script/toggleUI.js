@@ -9,7 +9,7 @@ const setUI = (user)=>{
   if(user){
     btnLogin.style.display='none';
     btnLogout.style.display='block';
-    if(window.location == 'biblioteca.html'){
+    if(window.location.href.includes('biblioteca.html')){
       contentUploader.style.display='block'; 
     };     
     btnAcasa.style.display='block';
@@ -18,7 +18,7 @@ const setUI = (user)=>{
   else{
     btnLogin.style.display = 'block';
     btnLogout.style.display = 'none';
-    if(window.location == 'biblioteca.html'){
+    if(window.location.href.includes('biblioteca.html')){
       contentUploader.style.display = 'none'; 
     };     
     btnAcasa.style.display ='block';
@@ -26,10 +26,3 @@ const setUI = (user)=>{
   }
 }
 
-const toggleUpload = (user)=> {
-  if(user){
-     
-  }else{
-    
-  }
-}
