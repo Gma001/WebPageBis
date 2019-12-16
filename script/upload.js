@@ -59,13 +59,13 @@ function renderElements(doc){
     let vid = document.createElement('video');
     vid.src =urlS ;
     vid.setAttribute('type',"video/mp4");
+    vid.setAttribute('class', "video")
     vid.controls= true;
     let titlu = document.createElement('label');   
     titlu.textContent = doc.data().name;    
     div.appendChild(vid);
     div.appendChild(titlu);
     library.appendChild(div);
-
 }
 
 
@@ -78,6 +78,10 @@ db.collection('Eticheta/').get().then((snapshot) =>{
     }) 
 })
 
+const videoPause = document.querySelector('.video');
+videoPause.addEventListener('playing',(e)=>{
+    
+})
 
     
 

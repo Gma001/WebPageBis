@@ -33,16 +33,21 @@ nav{
 }
 li{
   list-style: none;
+  font-weight: 700;
   padding: 13px;
+
+  
 }
 a{
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+  
 }
 li a{
   display: block;
   text-align: center;
+  
 }
 li a:hover{
   color: #E3BC00;
