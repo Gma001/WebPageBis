@@ -26,9 +26,11 @@ nav{
 @media query and (max-width: 600px) {
 .container{
   flex-wrap: wrap;
+  flex-direction: column;
 }
+
 .container > li{
-  flex-basis: 50%
+  flex-basis: 100%;
   }
 }
 li{
@@ -76,8 +78,8 @@ li a:hover{
 }
 
 .wrapperContent {
-  margin-right:20%;
-  margin-left:20%;
+  margin-right:10%;
+  margin-left:10%;
   min-height: 100vh;
   padding-bottom: 2.5rem;
 }

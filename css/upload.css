@@ -23,13 +23,19 @@
 }
 #bibliotecaVideo{
   display: flex;
+  justify-content:flex-start;  
   flex-wrap: wrap;
-  
+  padding-left: 25px;  
 }
-#videoElem{  
+@media screen and (max-width:854px){
+  #bibliotecaVideo{
+    justify-content: center;
+    padding:0;
+  }
+}
+#videoElem{    
   
-  justify-content: space-around;
-  width: 400px;
+  width: 339px;
   height: 280px;
   margin: 2px;
   text-align: center;
@@ -39,8 +45,20 @@ label{
   
 }
 video{
-  width: 350px;
-  margin: 20px;
+  width: 300px;
+  margin: 5px;
+}
+@media screen and (max-width:874px){
+  video{
+    width: 320px;
+    margin:10px;
+  }
+}
+@media screen and (max-width:500px){
+  video{
+    width: 250px;
+    margin:10px;
+  }
 }
 @media screen  and(max-width: 650px){
   #bibliotecaVideo{
@@ -49,7 +67,7 @@ video{
 }
 @media screen and (max-width: 656px){
   .wrapperContent{
-    min-width: 383px;
+    min-width: 320px;
   }
 }
 #myProgress{
